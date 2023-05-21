@@ -31,6 +31,7 @@ const FileUploader = () => {
       })
           .then(response => {
             console.log('Sucesso:', response.data);
+            window.location.reload();
           })
           .catch(error => {
             console.error('Erro:', error);

@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  challengecoodesh-back:
+    image: ${DOCKER_REGISTRY-}challengecoodeshback
+    build:
+      context: .
+      dockerfile: ChallengeCoodesh-BACK/Dockerfile
+    ports:
+      - 44351:80

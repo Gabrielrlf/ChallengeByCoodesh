@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeCoodesh-BACK", "ChallengeCoodesh-BACK\ChallengeCoodesh-BACK.csproj", "{6660BEF1-3EAF-4B31-9001-F3F4F36D006A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChallengeCoodesh-BACK", "ChallengeCoodesh-BACK\ChallengeCoodesh-BACK.csproj", "{6660BEF1-3EAF-4B31-9001-F3F4F36D006A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeCoodesh-BACK.Infra", "ChallengeCoodesh-BACK.Infra\ChallengeCoodesh-BACK.Infra.csproj", "{871EEE8D-A956-4505-8CCF-B6C0EBB5F670}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChallengeCoodesh-BACK.Infra", "ChallengeCoodesh-BACK.Infra\ChallengeCoodesh-BACK.Infra.csproj", "{871EEE8D-A956-4505-8CCF-B6C0EBB5F670}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeCoodesh-BACK.Domain", "ChallengeCoodesh-BACK.Domain\ChallengeCoodesh-BACK.Domain.csproj", "{EBAF2B52-50C6-4CCE-9FF3-503FBDC3C273}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChallengeCoodesh-BACK.Domain", "ChallengeCoodesh-BACK.Domain\ChallengeCoodesh-BACK.Domain.csproj", "{EBAF2B52-50C6-4CCE-9FF3-503FBDC3C273}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeCoodesh-BACK.Application", "ChallengeCoodesh-BACK.Application\ChallengeCoodesh-BACK.Application.csproj", "{E10B5999-2662-43E0-A67D-84511DE5B18E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChallengeCoodesh-BACK.Application", "ChallengeCoodesh-BACK.Application\ChallengeCoodesh-BACK.Application.csproj", "{E10B5999-2662-43E0-A67D-84511DE5B18E}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{6C16BD86-996B-4DFC-8699-2C8B46E6339A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E10B5999-2662-43E0-A67D-84511DE5B18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E10B5999-2662-43E0-A67D-84511DE5B18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E10B5999-2662-43E0-A67D-84511DE5B18E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C16BD86-996B-4DFC-8699-2C8B46E6339A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C16BD86-996B-4DFC-8699-2C8B46E6339A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C16BD86-996B-4DFC-8699-2C8B46E6339A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C16BD86-996B-4DFC-8699-2C8B46E6339A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

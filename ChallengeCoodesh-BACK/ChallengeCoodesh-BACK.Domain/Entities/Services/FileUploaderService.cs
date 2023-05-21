@@ -16,6 +16,9 @@ namespace ChallengeCoodesh_BACK.Domain.Entities.Services
             _fileUploaderRepository = fileUploaderRepository ?? throw new ArgumentException("This dependency is null", nameof(fileUploaderRepository));
         }
 
+        public IEnumerable<FileUploader> GetAll()
+        => _fileUploaderRepository.GetAll();
+
         public void Save(List<FileUploader> fileList)
         {
             fileList.ForEach(file =>
@@ -29,8 +32,6 @@ namespace ChallengeCoodesh_BACK.Domain.Entities.Services
                     throw new Exception($"{e} - {file.ProductDescription}");
                 }
             });
-
-
         }
 
     }

@@ -1,11 +1,13 @@
 ﻿using AutoMapper;
 using ChallengeCoodesh_BACK.Application.Services;
 using ChallengeCoodesh_BACK.Domain.Entities.Services;
+using ChallengeCoodesh_BACK.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace ChallengeCoodesh_BACK.Controllers
@@ -33,8 +35,12 @@ namespace ChallengeCoodesh_BACK.Controllers
             var objectList = _fileService.SerializerFile(textString);
             _fileUploaderService.Save(objectList);
 
-
-            return Ok();
+            return Created("Sucess", HttpStatusCode.Created);
         }
+
+        [HttpGet, Route("/GetAll")]
+        public IActionResult GetAll()
+        => Ok(_fileUploaderService.GetAll());
+
     }
 }
