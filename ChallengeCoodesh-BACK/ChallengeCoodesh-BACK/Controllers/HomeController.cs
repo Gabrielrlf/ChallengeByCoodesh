@@ -36,11 +36,20 @@ namespace ChallengeCoodesh_BACK.Controllers
         [HttpPost, Route("/Save")]
         public IActionResult Save([FromBody] string fileTxt)
         {
-            var textString = _fileService.Base64ToString(fileTxt);
-            var objectList = _fileService.SerializerFile(textString);
-            _fileUploaderService.Save(objectList);
+            try
+            {
 
-            return Created("Sucess", HttpStatusCode.Created);
+
+                var textString = _fileService.Base64ToString(fileTxt);
+                var objectList = _fileService.SerializerFile(textString);
+                _fileUploaderService.Save(objectList);
+
+                return Created("Sucess", HttpStatusCode.Created);
+            }
+            catch (Exception e)
+            {
+                return BadRequest($"Application error: {e.Message}");
+            }
         }
 
         /// <summary>
@@ -49,7 +58,15 @@ namespace ChallengeCoodesh_BACK.Controllers
         /// <returns></returns>
         [HttpGet, Route("/GetAll")]
         public IActionResult GetAll()
-        => Ok(_fileUploaderService.GetAll());
-
+        {
+            try
+            {
+                return Ok(_fileUploaderService.GetAll());
+            }
+            catch (Exception e)
+            {
+                return BadRequest($"Application error: {e.Message}");
+            }
+        }
     }
 }
