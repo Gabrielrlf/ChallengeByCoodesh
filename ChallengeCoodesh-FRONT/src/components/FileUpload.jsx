@@ -23,7 +23,7 @@ const FileUploader = () => {
 
         axios({
             method: 'post',
-            url: `https://localhost:44351/Save`,
+            url: `http://localhost:51470/Save`,
             data: JSON.stringify(jsonData.file),
             headers: {
                 'Content-Type': "application/json"

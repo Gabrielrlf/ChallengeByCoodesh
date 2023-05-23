@@ -27,6 +27,11 @@ namespace ChallengeCoodesh_BACK.Controllers
             _mapper = mapper ?? throw new ArgumentException("This dependency is null", nameof(mapper));
 
         }
+        /// <summary>
+        /// This bellow method transformed a txt file and save a transaction receive.
+        /// </summary>
+        /// <param name="fileTxt"></param>
+        /// <returns></returns>
 
         [HttpPost, Route("/Save")]
         public IActionResult Save([FromBody] string fileTxt)
@@ -38,6 +43,10 @@ namespace ChallengeCoodesh_BACK.Controllers
             return Created("Sucess", HttpStatusCode.Created);
         }
 
+        /// <summary>
+        /// return a list transaction.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet, Route("/GetAll")]
         public IActionResult GetAll()
         => Ok(_fileUploaderService.GetAll());

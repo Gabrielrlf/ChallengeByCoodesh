@@ -23,7 +23,7 @@ const GridComponent = () => {
     }, [data])
 
     useEffect(() => {
-        axios.get(`https://localhost:44351/GetAll`).then(response => {
+        axios.get(`http://localhost:51470/GetAll`).then(response => {
             setData(response.data)
             console.log("Success: ", response.data)
         }

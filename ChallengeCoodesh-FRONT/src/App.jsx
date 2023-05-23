@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import FileUploader from './components/FileUpload'
 import GridComponent from './components/GridComponent'

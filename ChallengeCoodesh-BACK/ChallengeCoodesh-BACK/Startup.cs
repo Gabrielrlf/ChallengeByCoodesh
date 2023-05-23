@@ -65,9 +65,6 @@ namespace ChallengeCoodesh_BACK
             app.UseCors("AllowAll");
             app.UseHttpsRedirection();
 
-
-            app.UseHttpsRedirection();
-
             app.UseRouting();
 
             app.UseAuthorization();
